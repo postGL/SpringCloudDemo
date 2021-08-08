@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.10.RELEASE</version>
+		<version>1.5.14.RELEASE</version>
 	</parent>
 
 	<groupId>com.zbs</groupId>
@@ -17,7 +17,6 @@
 
 	<modules>
 		<module>spring-cloud-eureka-server</module>
-		<module>spring-cloud-eureka-register</module>
 	</modules>
 
 	<!-- 依赖版本管理 -->
@@ -27,35 +26,35 @@
 		<java.version>1.8</java.version>
 
 		<!-- 基础框架 -->
-		<spring.cloud.version>Edgware.SR3</spring.cloud.version>
-		<bom.version>Brussels-SR10</bom.version>
+		<spring.cloud.version>Edgware.SR4</spring.cloud.version>
+		<!--<bom.version>Brussels-SR10</bom.version>-->
 
-		<mysql.version>5.1.39</mysql.version>
-		<druid.version>1.1.13</druid.version>
-		<log.version>1.1.1</log.version>
-		<mybatisplus.version>3.0.7.1</mybatisplus.version>
-		<mybatis.version>3.4.2</mybatis.version>
-		<mybatis-starter-version>1.3.2</mybatis-starter-version>
-		<mybatis.plus.version>2.0.7</mybatis.plus.version>
-		<mapper.version>3.4.0</mapper.version>
-		<modelmapper.version>1.1.2</modelmapper.version>
-		<mapper-spring-boot.version>1.1.1</mapper-spring-boot.version>
-		<pagehelper.version>1.2.3</pagehelper.version>
+		<!--<mysql.version>5.1.39</mysql.version>-->
+		<!--<druid.version>1.1.13</druid.version>-->
+		<!--<log.version>1.1.1</log.version>-->
+		<!--<mybatisplus.version>3.0.7.1</mybatisplus.version>-->
+		<!--<mybatis.version>3.4.2</mybatis.version>-->
+		<!--<mybatis-starter-version>1.3.2</mybatis-starter-version>-->
+		<!--<mybatis.plus.version>2.0.7</mybatis.plus.version>-->
+		<!--<mapper.version>3.4.0</mapper.version>-->
+		<!--<modelmapper.version>1.1.2</modelmapper.version>-->
+		<!--<mapper-spring-boot.version>1.1.1</mapper-spring-boot.version>-->
+		<!--<pagehelper.version>1.2.3</pagehelper.version>-->
 	</properties>
 
 	<!-- 依赖管理 -->
 	<dependencyManagement>
 		<dependencies>
 			<!-- Jar包 版本号自动管理 -->
-			<dependency>
-				<groupId>io.spring.platform</groupId>
-				<artifactId>platform-bom</artifactId>
-				<version>${bom.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
+			<!--<dependency>-->
+			<!--<groupId>io.spring.platform</groupId>-->
+			<!--<artifactId>platform-bom</artifactId>-->
+			<!--<version>${bom.version}</version>-->
+			<!--<type>pom</type>-->
+			<!--<scope>import</scope>-->
+			<!--</dependency>-->
 
-			<!-- 基础框架 -->
+			<!-- 导入Spring Cloud的依赖管理 -->
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
