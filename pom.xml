@@ -19,6 +19,8 @@
 
 	<modules>
 		<module>spring-cloud-eureka-server</module>
+		<module>spring-cloud-eureka-provider</module>
+		<module>spring-cloud-eureka-consumer</module>
 	</modules>
 
 	<!--版本声明-->
