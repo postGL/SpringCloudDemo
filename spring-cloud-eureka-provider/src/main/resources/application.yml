@@ -10,3 +10,8 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka
+
+# actuator info 监控台点击provider跳转页面信息
+info:
+  app.name: com.zbs.springcloud
+  company.name: postGL，配置监控平台信息，标注自己是哪个服务
