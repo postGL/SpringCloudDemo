@@ -23,6 +23,7 @@
 		<module>spring-cloud-eureka-consumer</module>
 		<module>spring-cloud-eureka-server-01</module>
 		<module>spring-cloud-eureka-server-02</module>
+		<module>spring-cloud-eureka-api</module>
 	</modules>
 
 	<!--版本声明-->
@@ -31,9 +32,12 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.versison>1.8</java.versison>
 		<spring-cloud.version>Finchley.SR1</spring-cloud.version>
-		<mapper.starter.version>1.1.5</mapper.starter.version>
-		<mysql.version>8.0.16</mysql.version>
+		<mysql.version>5.1.38</mysql.version>
+		<druid.version>1.1.10</druid.version>
 		<pageHelper.starter.version>1.2.5</pageHelper.starter.version>
+		<junit.version>4.12</junit.version>
+		<lombok.version>1.16.18</lombok.version>
+		<log4j.version>1.2.17</log4j.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -45,11 +49,13 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-			<!--通用mapper-->
+
+
+			<!--SpringBoot启动器-->
 			<dependency>
-				<groupId>tk.mybatis</groupId>
-				<artifactId>mapper-spring-boot-starter</artifactId>
-				<version>${mapper.starter.version}</version>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-boot-starter</artifactId>
+				<version>3.4.0</version>
 			</dependency>
 			<!--分页插件-->
 			<dependency>
@@ -62,6 +68,30 @@
 				<groupId>mysql</groupId>
 				<artifactId>mysql-connector-java</artifactId>
 				<version>${mysql.version}</version>
+			</dependency>
+			<!--数据库数据源-->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${druid.version}</version>
+			</dependency>
+			<!--Lombok-->
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+			</dependency>
+			<!--Log4j-->
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<!--Junit-->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
