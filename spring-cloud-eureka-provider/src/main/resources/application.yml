@@ -9,7 +9,13 @@ eureka:
     register-with-eureka: true
     fetch-registry: false
     service-url:
-      defaultZone: http://127.0.0.1:8761/eureka
+      # 单机
+      #defaultZone: http://eureka-server.com:8760/eureka
+      # 集群
+      defaultZone: http://eureka-server.com:8760/eureka,http://eureka-server-01.com:8761/eureka,http://eureka-server-02.com:8762/eureka
+  instance:
+    # 修改eureka上provider提供者的默认信息
+    instance-id: springCloud-provider-8001
 
 # actuator info 监控台点击provider跳转页面信息
 info:

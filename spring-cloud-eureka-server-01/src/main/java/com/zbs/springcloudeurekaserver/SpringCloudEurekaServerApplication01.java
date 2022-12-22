@@ -7,10 +7,10 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 // 启动后自动注册到Eureka中去
 @EnableEurekaServer
 @SpringBootApplication
-public class SpringCloudEurekaServerApplication {
+public class SpringCloudEurekaServerApplication01 {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringCloudEurekaServerApplication.class, args);
+        SpringApplication.run(SpringCloudEurekaServerApplication01.class, args);
     }
 
 }
