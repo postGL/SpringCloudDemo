@@ -20,6 +20,10 @@ public class DeptFeignServiceFallBack implements DeptFeignService {
     public List<DeptDto> queryDeptList() {
         List<DeptDto> deptDtoList = new ArrayList<>();
         log.error("未查询到数据");
+        DeptDto deptDto = new DeptDto()
+                .setDeptno(-1L)
+                .setDname("未找到该部门~");
+        deptDtoList.add(deptDto);
         return deptDtoList;
     }
 }
