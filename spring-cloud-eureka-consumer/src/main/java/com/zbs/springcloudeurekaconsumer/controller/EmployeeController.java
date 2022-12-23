@@ -36,6 +36,7 @@ public class EmployeeController {
         //获取实例
         ServiceInstance instance = instancesList.get(0);
         //获取主机地址
+        // java.lang.IllegalStateException: No instances available for windows10.microdone.cn 不知道改哪出现问题了
         String hostName = instance.getHost();
         //获取端口号
         int port = instance.getPort();
