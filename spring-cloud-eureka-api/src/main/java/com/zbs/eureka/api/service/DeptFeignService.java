@@ -1,6 +1,7 @@
 package com.zbs.eureka.api.service;
 
 import com.zbs.eureka.api.beans.DeptDto;
+import com.zbs.eureka.api.service.impl.DeptFeignServiceFallBack;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -12,7 +13,7 @@ import java.util.List;
  * author: zhangbs
  * version: 1.0
  */
-@FeignClient(value = "EMP-PROVIDER")
+@FeignClient(value = "EMP-PROVIDER", fallback = DeptFeignServiceFallBack.class)
 public interface DeptFeignService {
 
     @GetMapping("/dept/queryList")
