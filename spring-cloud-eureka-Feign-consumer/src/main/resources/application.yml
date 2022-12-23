@@ -11,3 +11,13 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://eureka-server.com:8760/eureka,http://eureka-server-01.com:8761/eureka,http://eureka-server-02.com:8762/eureka
+feign:
+#  httpclient:
+#    enabled: true
+#    max-connections: 200 #最大连接数
+#    max-connections-per-route: 60 #单个路径的最大连接数
+#    connection-timeout: 1
+#  sentinel:
+#    enabled: true
+hystrix:
+  enabled: true
