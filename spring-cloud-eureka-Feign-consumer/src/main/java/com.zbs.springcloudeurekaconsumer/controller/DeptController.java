@@ -4,10 +4,9 @@ import com.zbs.eureka.api.beans.DeptDto;
 import com.zbs.eureka.api.service.DeptFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 /**
  * description: EmployeeController
@@ -22,12 +21,12 @@ public class DeptController {
     @Autowired
     private DeptFeignService deptFeignService;
 
-    @GetMapping("/queryList")
-    public List<DeptDto> getTest() {
+    @GetMapping("/queryById/{id}")
+    public DeptDto getTest(@PathVariable int id) {
         //调用接口
-        List<DeptDto> result = deptFeignService.queryDeptList();
+        DeptDto deptDto = deptFeignService.queryById(id);
         //返回结果
-        return result;
+        return deptDto;
     }
 
 }
