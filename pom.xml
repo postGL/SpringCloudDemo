@@ -26,6 +26,7 @@
 		<module>spring-cloud-eureka-api</module>
 		<module>spring-cloud-eureka-provider-01</module>
 		<module>spring-cloud-eureka-provider-02</module>
+		<module>spring-cloud-eureka-Feign-consumer</module>
 	</modules>
 
 	<!--版本声明-->

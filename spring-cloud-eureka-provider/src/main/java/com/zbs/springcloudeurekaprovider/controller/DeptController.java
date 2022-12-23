@@ -1,6 +1,7 @@
 package com.zbs.springcloudeurekaprovider.controller;
 
 import com.zbs.eureka.api.beans.DeptDto;
+import com.zbs.eureka.api.service.DeptFeignService;
 import com.zbs.springcloudeurekaprovider.db.entity.Dept;
 import com.zbs.springcloudeurekaprovider.service.IDeptService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,11 +21,12 @@ import java.util.stream.Collectors;
  */
 @RestController
 @RequestMapping("/dept")
-public class DeptController {
+public class DeptController implements DeptFeignService {
 
     @Autowired
     private IDeptService deptService;
 
+    @Override
     @GetMapping("/queryList")
     public List<DeptDto> queryDeptList() {
         List<Dept> deptList = deptService.lambdaQuery().list();

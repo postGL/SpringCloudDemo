@@ -1,0 +1,13 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: emp-customer
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-server.com:8760/eureka,http://eureka-server-01.com:8761/eureka,http://eureka-server-02.com:8762/eureka
