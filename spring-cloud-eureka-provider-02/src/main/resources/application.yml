@@ -1,20 +1,20 @@
 server:
-  port: 8000
+  port: 8002
 
 spring:
   application:
-    name: emp-provider # 负载均衡，3个provider名称一致
+    name: emp-provider
     #数据源的配置
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource #数据源为druid
     driver-class-name: com.mysql.jdbc.Driver #数据库驱动
-    url: jdbc:mysql://localhost:3306/spring-cloud-demo?useUnicode=true&characterEncoding=utf-8&servetTimeZone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/spring-cloud-demo-02?useUnicode=true&characterEncoding=utf-8&servetTimeZone=Asia/Shanghai
     username: root
     password: root
 
 #mybatis配置
 mybatis:
-  type-aliases-package: com.zbs.com.zbs.springcloudeurekaprovider.db.mapper
+  type-aliases-package: com.zbs.springcloudeurekaprovider.db.mapper
   mapper-locations: classpath*:mapper/*.xml
 
 eureka:
@@ -28,7 +28,7 @@ eureka:
       defaultZone: http://eureka-server.com:8760/eureka,http://eureka-server-01.com:8761/eureka,http://eureka-server-02.com:8762/eureka
   instance:
     # 修改eureka上provider提供者的默认信息
-    instance-id: springCloud-provider-8000
+    instance-id: springCloud-provider-8002
 
 # actuator info 监控台点击provider跳转页面信息
 info:

@@ -24,6 +24,8 @@
 		<module>spring-cloud-eureka-server-01</module>
 		<module>spring-cloud-eureka-server-02</module>
 		<module>spring-cloud-eureka-api</module>
+		<module>spring-cloud-eureka-provider-01</module>
+		<module>spring-cloud-eureka-provider-02</module>
 	</modules>
 
 	<!--版本声明-->
