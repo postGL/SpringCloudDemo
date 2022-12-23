@@ -1,8 +1,10 @@
 package com.zbs.springcloudeurekaconsumer;
 
+import com.zbs.myrule.MyRuleConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 
 /**
  * @EnableEurekaClient只适用于使用Eureka作为注册中心的场景，@EnableDiscoveryClient可以适用于其他注册中心的场景比如nacos等。
@@ -20,6 +22,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 //@EnableEurekaClient
 @SpringBootApplication
+@RibbonClient(name = "EMP-PROVIDER", configuration = MyRuleConfig.class)
 public class SpringCloudEurekaConsumerApplication {
 
     public static void main(String[] args) {
