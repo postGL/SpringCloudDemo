@@ -16,3 +16,11 @@ eureka:
 info:
   app.name: zbs
   company.name: com.zbs
+
+zuul:
+  # 不能在使用这个路径访问了，否则emp-provider和/mydept都可以进行访问
+  ignored-services: emp-provider
+  # /emp-provider会暴漏项目路径，用/mydept代替进行访问
+  routes:
+    mydept.serviceId: emp-provider
+    mydept.path: /mydept/**
