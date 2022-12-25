@@ -29,6 +29,8 @@ eureka:
   instance:
     # 修改eureka上provider提供者的默认信息
     instance-id: springCloud-hystrix-provider-9000
+    # true 可以显示链接的IP
+    prefer-ip-address: true
 
 # actuator info 监控台点击provider跳转页面信息
 info:

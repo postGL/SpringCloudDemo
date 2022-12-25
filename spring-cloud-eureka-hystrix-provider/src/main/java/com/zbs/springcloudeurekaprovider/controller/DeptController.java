@@ -43,6 +43,12 @@ public class DeptController {
         return deptDto;
     }
 
+    /**
+     * @HystrixCommand(fallbackMethod = "getByIdFallBack")
+     * Hystrix 熔断，熔断是服务器处理的，再找不到数据，或者出现异常的时候，能够返回信息。
+     * @param id
+     * @return
+     */
     public DeptDto getByIdFallBack(int id) {
         log.error("未查询到数据！！！");
         DeptDto deptDto = new DeptDto()

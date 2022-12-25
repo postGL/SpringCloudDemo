@@ -15,10 +15,10 @@ public class DeptFeignServiceFallBack implements DeptFeignService {
 
     @Override
     public DeptDto queryById(int id) {
-        log.error("未查询到数据！！！");
+        log.error("服务降级Fallback，未查询到数据！！！");
         DeptDto deptDto = new DeptDto()
                 .setDeptno(-1L)
-                .setDname("未找到该部门~");
+                .setDname("服务降级Fallback，未找到该部门~");
         return deptDto;
     }
 }
