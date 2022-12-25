@@ -27,9 +27,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-		<!--Hystrix 熔断-->
+		<!--Hystrix 熔断,spring-cloud-starter-hystrix不维护了，建议用spring-cloud-starter-netflix-hystrix-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
+<!--			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>-->
 			<artifactId>spring-cloud-starter-hystrix</artifactId>
 			<version>1.4.6.RELEASE</version>
 		</dependency>
