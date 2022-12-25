@@ -1,5 +1,5 @@
 server:
-  port: 9000
+  port: 8010
 
 spring:
   application:
@@ -28,7 +28,7 @@ eureka:
       defaultZone: http://eureka-server.com:8760/eureka,http://eureka-server-01.com:8761/eureka,http://eureka-server-02.com:8762/eureka
   instance:
     # 修改eureka上provider提供者的默认信息
-    instance-id: springCloud-hystrix-provider-9000
+    instance-id: springCloud-hystrix-provider-8010
     # true 可以显示链接的IP
     prefer-ip-address: true
 
