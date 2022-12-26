@@ -30,6 +30,7 @@
 		<module>spring-cloud-eureka-hystrix-provider</module>
 		<module>spring-cloud-eureka-Feign-Hystrix-Dashboard-consumer</module>
 		<module>spring-cloud-eureka-zuul</module>
+		<module>spring-cloud-config-server</module>
 	</modules>
 
 	<!--版本声明-->
