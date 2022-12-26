@@ -18,8 +18,11 @@ info:
   company.name: com.zbs
 
 zuul:
+  # *：所有项目都不能通过服务Id进行访问，必须通过配置进行访问
   # 不能在使用这个路径访问了，否则emp-provider和/mydept都可以进行访问
   ignored-services: "*"
+  # 设置公共的前缀
+  prefix: /zbs
   # /emp-provider会暴漏项目路径，用/mydept代替进行访问
   routes:
     mydept.serviceId: emp-provider
