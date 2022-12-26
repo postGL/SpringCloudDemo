@@ -2,6 +2,7 @@ server:
   port: 3344
 
 # config demo：https://blog.csdn.net/qq_38863292/article/details/106566513
+# 暂时不能用，有问题未解决
 spring:
   application:
     name: springcloud-config-server
