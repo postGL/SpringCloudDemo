@@ -5,12 +5,11 @@ import com.zbs.eureka.api.service.DeptFeignService;
 import com.zbs.springcloudeurekaprovider.db.entity.Dept;
 import com.zbs.springcloudeurekaprovider.service.IDeptService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * <p>
@@ -27,14 +26,19 @@ public class DeptController implements DeptFeignService {
     private IDeptService deptService;
 
     @Override
-    @GetMapping("/queryList")
-    public List<DeptDto> queryDeptList() {
-        List<Dept> deptList = deptService.lambdaQuery().list();
-        List<DeptDto> deptDtoList = deptList.stream().map(dept -> new DeptDto()
+    @GetMapping("/queryById/{id}")
+    public DeptDto queryById(@PathVariable int id) {
+        //调用接口
+        Dept dept = deptService.getById(id);
+        if (ObjectUtils.isEmpty(dept)) {
+            throw new RuntimeException("未找到该部门信息~");
+        }
+        DeptDto deptDto = new DeptDto()
                 .setDeptno(dept.getDeptno())
                 .setDname(dept.getDname())
-                .setDbSource(dept.getDbSource())).collect(Collectors.toList());
-        return deptDtoList;
+                .setDbSource(dept.getDbSource());
+        //返回结果
+        return deptDto;
     }
 
 }
