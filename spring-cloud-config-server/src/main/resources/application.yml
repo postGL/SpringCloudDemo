@@ -12,5 +12,5 @@ spring:
       server:
         git:
           uri: https://gitee.com/zbsdemo/spring-cloud-config.git #是https，不是git
-          username: *
-          password: *
+          username:
+          password:
