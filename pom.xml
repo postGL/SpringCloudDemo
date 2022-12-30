@@ -33,6 +33,7 @@
 		<module>spring-cloud-config-server</module>
 		<module>spring-cloud-config-client</module>
 		<module>spring-cloud-eureka-server-config</module>
+		<module>spring-cloud-eureka-hystrix-provider-config</module>
 	</modules>
 
 	<!--版本声明-->
