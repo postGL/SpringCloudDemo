@@ -1,0 +1,22 @@
+server:
+  port: 3344
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+# config服务使用过程：consumer/provider--》config-comsumer-->config-server
+# config demo：https://blog.csdn.net/qq_38863292/article/details/106566513
+# 暂时不能用，有问题未解决
+spring:
+  application:
+    name: springcloud-config-server
+  # 连接远程仓库
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/zbsdemo/spring-cloud-config.git #是https，不是git
+          username: 250468591@qq.com
+          password: zb

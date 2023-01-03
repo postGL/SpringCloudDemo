@@ -1,0 +1,4 @@
+#用户级别的配置 配置去读取谁
+spring:
+  application:
+    name: springcloud-config-client

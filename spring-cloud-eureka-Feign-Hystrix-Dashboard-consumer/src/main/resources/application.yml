@@ -1,0 +1,7 @@
+server:
+  port: 8092
+
+# 否则监控流时，会出现 ashboardConfiguration$ProxyStreamServlet : Origin parameter: http://localhost:9000/actuator/hystrix.stream is not in the allowed list of proxy host names.  If it should be allowed add it to hystrix.dashboard.proxyStreamAllowList.
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "localhost"
