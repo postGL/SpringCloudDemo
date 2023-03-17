@@ -23,6 +23,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(value = "EMP-PROVIDER", fallback = DeptFeignServiceFallBack.class, fallbackFactory = DeptFeignServiceFallBackFactory.class)
 public interface DeptFeignService {
 
+    /**
+     * DeptFeignService Feign调DeptProvider提供RestFul接口
+     * 将@FeignClient的value和@GetMapping的value拼接成URL地址。http://EMP-PROVIDER//dept/queryById/{id}
+     * 前提provider提供REST接口，provider不用实现service接口。
+     * @param id
+     * @return
+     */
     @GetMapping("/dept/queryById/{id}")
     DeptDto queryById(@PathVariable int id);
 

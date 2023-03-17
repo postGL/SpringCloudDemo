@@ -1,7 +1,6 @@
 package com.zbs.springcloudeurekaprovider.controller;
 
 import com.zbs.eureka.api.beans.DeptDto;
-import com.zbs.eureka.api.service.DeptFeignService;
 import com.zbs.springcloudeurekaprovider.db.entity.Dept;
 import com.zbs.springcloudeurekaprovider.service.IDeptService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,12 +19,11 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/dept")
-public class DeptController implements DeptFeignService {
+public class DeptController {
 
     @Autowired
     private IDeptService deptService;
 
-    @Override
     @GetMapping("/queryById/{id}")
     public DeptDto queryById(@PathVariable int id) {
         //调用接口
