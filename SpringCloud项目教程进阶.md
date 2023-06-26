@@ -1,4 +1,5 @@
 SpringCloud-Netflix教程
+狂神说springcloud：https://www.bilibili.com/video/BV1jJ411S7xr?p=1
 
 1. 搭建eureka服务、生产者（连接数据库）、消费者（用RestTemplate restTemplate）
 
